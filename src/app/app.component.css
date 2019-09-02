@@ -1,0 +1,21 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.row_container {
+  justify-content: center;
+}
+
+.col_container {
+  display: flex;
+  justify-content: center;
+}
+
+.button_container {
+  width: inherit;
+}

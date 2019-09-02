@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row" class="col_container" style="margin-top: 15px; font-weight: bold">
+    Pick the words in order
+  </div>
+  <hr>
+  <div class="row" class="col_container">
+    {{str}}
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col col_container" *ngFor="let item of resultWords">
+      <button type="button" class="btn btn-secondary button_container" (click)="removeWord(item)">{{item}}</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col col_container" *ngFor="let item of words">
+      <button type="button" class="btn btn-info button_container" (click)="addWord(item)">{{item}}</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row row_container">
+    <button type="button" class="btn button_container"
+      [ngClass]="{ 'btn-danger' : flag === false, 'btn-success': flag === true}">{{result}}</button>
+  </div>
+</div>
